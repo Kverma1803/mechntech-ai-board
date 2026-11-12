@@ -1,0 +1,36 @@
+{
+    "active_provider": "Groq",
+    "providers": {
+        "Groq": {
+            "base_url": "https://api.groq.com/openai/v1",
+            "model": "qwen/qwen3.8-27b",
+            "api_key": "PASTE_YOUR_Grok_KEY_HERE",
+            "delay_seconds": 45,
+            "models": {
+                "qwen/qwen3.8-27b": "Best when uploading CAD screenshots, blueprints, or photos (supports up to 3 images). Note: Free tier has a 1,000 output tokens/min limit\u2014keep delay at 45s.",
+                "llama-3.3-70b-versatile": "Best for text-only engineering specs, DFMEA, and complex calculations. Faster with much higher free-tier limits (use 5s delay). Does NOT read images.",
+                "openai/gpt-oss-120b": "Best for deep first-principles math, simulation equations, and Chief Engineer synthesis on text-only inputs. Does NOT read images."
+            }
+        },
+        "Gemini (Google)": {
+            "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+            "model": "gemini-3.8-flash",
+            "api_key": "PASTE_YOUR_GEMINI_KEY_HERE",
+            "delay_seconds": 2,
+            "models": {
+                "gemini-3.8-flash": "Best all-rounder for fast multimodal reviews (CAD drawings + PDFs + text) with generous free-tier limits.",
+                "gemini-3.8-pro": "Best for heavy structural calculations, complex DFMEA tables, and multi-document conflict resolution."
+            }
+        },
+        "OpenAI": {
+            "base_url": "https://api.openai.com/v1",
+            "model": "gpt-4o",
+            "api_key": "PASTE_YOUR_OPENAI_KEY_HERE",
+            "delay_seconds": 0,
+            "models": {
+                "gpt-4o": "Best paid multimodal model for high-accuracy CAD image inspection and balanced engineering analysis.",
+                "gpt-4o-mini": "Best low-cost option for quick preliminary checks and text-heavy specification reviews."
+            }
+        }
+    }
+}
